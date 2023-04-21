@@ -25,7 +25,8 @@ namespace Datas
 
         private void btnCalcula_Click(object sender, EventArgs e)
         {
-            calculaData();
+            addDias();
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace Datas
             txtDias.Focus();
         }
 
-        private void calculaData()
+        private void addDias()
         {
             try
             {
