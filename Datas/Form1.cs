@@ -44,7 +44,7 @@ namespace Datas
             }
             catch (FormatException)
             {
-                MessageBox.Show("Digite somente números.", "Atenção!", MessageBoxButtons.OK);
+                MessageBox.Show("Digite somente números(negativos são aceitos).", "Atenção!", MessageBoxButtons.OK);
                 LimparForm();
             }
             catch(Exception)
