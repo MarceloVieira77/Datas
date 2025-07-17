@@ -18,7 +18,7 @@ namespace Datas
 
         private void btnCalcula_Click(object sender, EventArgs e)
         {
-            AddDias();
+            AddDias(dtpData.Value);
 
         }
 
@@ -34,12 +34,11 @@ namespace Datas
             txtDias.Focus();
         }
 
-        private void AddDias()
+        private void AddDias(DateTime dataForm)
         {
             try
             {
-                var dataInformada = dtpData.Value;
-                var dataCalculada = dataInformada.AddDays(Convert.ToInt32(txtDias.Text));
+                var dataCalculada = dataForm.AddDays(Convert.ToInt32(txtDias.Text));
                 lblDataFinal.Text = dataCalculada.ToShortDateString();
             }
             catch (FormatException)
@@ -47,7 +46,7 @@ namespace Datas
                 MessageBox.Show("Digite somente números(negativos são aceitos).", "Atenção!", MessageBoxButtons.OK);
                 LimparForm();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Erro ao calcular data. Verifique o valor digitado.", "Atenção!", MessageBoxButtons.OK);
                 LimparForm();
