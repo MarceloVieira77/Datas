@@ -9,4 +9,10 @@
     <FileVersion>1.0.0.3</FileVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Datas.Tests\**" />
+    <EmbeddedResource Remove="Datas.Tests\**" />
+    <None Remove="Datas.Tests\**" />
+  </ItemGroup>
+
 </Project>
