@@ -38,7 +38,8 @@ namespace Datas
         {
             try
             {
-                var dataCalculada = dataForm.AddDays(Convert.ToInt32(txtDias.Text));
+                var calculator = new DateCalculator();
+                var dataCalculada = calculator.AddDays(dataForm, Convert.ToInt32(txtDias.Text));
                 lblDataFinal.Text = dataCalculada.ToShortDateString();
             }
             catch (FormatException)
