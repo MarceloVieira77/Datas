@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace Datas
@@ -14,12 +14,29 @@ namespace Datas
         {
             LimparForm();
             dtpData.Value = DateTime.Today;
+            dtpData2.Value = DateTime.Today;
         }
 
         private void btnCalcula_Click(object sender, EventArgs e)
         {
             AddDias(dtpData.Value);
 
+        }
+
+        private void btnCalculaDiferenca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var calculator = new DateCalculator();
+                int dias = calculator.CalculateDifference(dtpData.Value, dtpData2.Value);
+                txtDias.Text = dias.ToString();
+                lblDataFinal.Text = $"{dias} dia(s)";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro ao calcular a diferença de datas.", "Atenção!", MessageBoxButtons.OK);
+                LimparForm();
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿
+
 namespace Datas
 {
     partial class Form1
@@ -34,7 +34,9 @@ namespace Datas
             this.lblDataFinal = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.dtpData2 = new System.Windows.Forms.DateTimePicker();
             this.lblDias = new System.Windows.Forms.Label();
+            this.btnCalculaDiferenca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCalcula
@@ -49,7 +51,7 @@ namespace Datas
             // 
             // txtDias
             // 
-            this.txtDias.Location = new System.Drawing.Point(12, 94);
+            this.txtDias.Location = new System.Drawing.Point(12, 120);
             this.txtDias.MaxLength = 5;
             this.txtDias.Name = "txtDias";
             this.txtDias.Size = new System.Drawing.Size(109, 23);
@@ -60,7 +62,7 @@ namespace Datas
             this.lblDataFinal.AutoSize = true;
             this.lblDataFinal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDataFinal.ForeColor = System.Drawing.Color.Blue;
-            this.lblDataFinal.Location = new System.Drawing.Point(13, 120);
+            this.lblDataFinal.Location = new System.Drawing.Point(13, 146);
             this.lblDataFinal.Name = "lblDataFinal";
             this.lblDataFinal.Size = new System.Drawing.Size(50, 19);
             this.lblDataFinal.TabIndex = 3;
@@ -68,7 +70,7 @@ namespace Datas
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(184, 94);
+            this.btnLimpar.Location = new System.Drawing.Point(184, 120);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 4;
@@ -84,10 +86,28 @@ namespace Datas
             this.dtpData.Size = new System.Drawing.Size(109, 23);
             this.dtpData.TabIndex = 5;
             // 
+            // dtpData2
+            // 
+            this.dtpData2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData2.Location = new System.Drawing.Point(13, 56);
+            this.dtpData2.Name = "dtpData2";
+            this.dtpData2.Size = new System.Drawing.Size(109, 23);
+            this.dtpData2.TabIndex = 7;
+            // 
+            // btnCalculaDiferenca
+            // 
+            this.btnCalculaDiferenca.Location = new System.Drawing.Point(173, 56);
+            this.btnCalculaDiferenca.Name = "btnCalculaDiferenca";
+            this.btnCalculaDiferenca.Size = new System.Drawing.Size(86, 23);
+            this.btnCalculaDiferenca.TabIndex = 8;
+            this.btnCalculaDiferenca.Text = "Diferença";
+            this.btnCalculaDiferenca.UseVisualStyleBackColor = true;
+            this.btnCalculaDiferenca.Click += new System.EventHandler(this.btnCalculaDiferenca_Click);
+            // 
             // lblDias
             // 
             this.lblDias.AutoSize = true;
-            this.lblDias.Location = new System.Drawing.Point(12, 73);
+            this.lblDias.Location = new System.Drawing.Point(12, 100);
             this.lblDias.Name = "lblDias";
             this.lblDias.Size = new System.Drawing.Size(32, 15);
             this.lblDias.TabIndex = 6;
@@ -97,7 +117,9 @@ namespace Datas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 168);
+            this.ClientSize = new System.Drawing.Size(297, 185);
+            this.Controls.Add(this.btnCalculaDiferenca);
+            this.Controls.Add(this.dtpData2);
             this.Controls.Add(this.lblDias);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.btnLimpar);
@@ -120,6 +142,8 @@ namespace Datas
         private System.Windows.Forms.Label lblDataFinal;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.DateTimePicker dtpData2;
+        private System.Windows.Forms.Button btnCalculaDiferenca;
         private System.Windows.Forms.Label lblDias;
     }
 }

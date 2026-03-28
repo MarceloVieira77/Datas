@@ -8,5 +8,10 @@ namespace Datas
         {
             return startDate.AddDays(days);
         }
+
+        public int CalculateDifference(DateTime startDate, DateTime endDate)
+        {
+            return Math.Abs((endDate - startDate).Days);
+        }
     }
 }

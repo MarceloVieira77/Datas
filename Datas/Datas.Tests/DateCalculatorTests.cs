@@ -50,5 +50,29 @@ namespace Datas.Tests
             // Assert
             Assert.Equal(startDate, result);
         }
+
+        [Fact]
+        public void CalculateDifference_ShouldReturnPositiveDays_WhenEndDateIsLater()
+        {
+            var calculator = new DateCalculator();
+            var startDate = new DateTime(2023, 1, 1);
+            var endDate = new DateTime(2023, 1, 11);
+
+            var result = calculator.CalculateDifference(startDate, endDate);
+
+            Assert.Equal(10, result);
+        }
+
+        [Fact]
+        public void CalculateDifference_ShouldReturnPositiveDays_WhenStartDateIsLater()
+        {
+            var calculator = new DateCalculator();
+            var startDate = new DateTime(2023, 1, 11);
+            var endDate = new DateTime(2023, 1, 1);
+
+            var result = calculator.CalculateDifference(startDate, endDate);
+
+            Assert.Equal(10, result);
+        }
     }
 }
